@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chuyen doi tien te</title>
+</head>
+<body>
+		Amount
+		<input type="" id = "inputTien">
+		From Currency
+		<select name=""id="inputFromCurrency">
+			<option value="23000">Việt Nam</option>
+			<option value="1">Dolar Mỹ</option>
+		</select>
+		To Currency
+		<select name="" id="inputToCurrency">
+			<option value="1">Dolar Mỹ</option>
+			<option value="23000">Việt Nam</option>
+		</select>
+		<button type="submit" onclick="chuyendoitiente()" id = "btConvert" class = "">Convert</button>
+	<script>
+		function chuyendoitiente() {
+		    let inputTien = document.getElementById("inputTien").value;
+		    let inputFromCurrency = document.getElementById("inputFromCurrency").value;
+		    let inputToCurrency = document.getElementById("inputToCurrency").value;
+		    let Tien = parseFloat(inputTien);
+
+		    let outputbtConvert;
+
+		    if (Tien == 0 || Tien == null || inputTien == " "){
+		    }
+		    else {
+		        let FromCurrency = parseFloat(inputFromCurrency);
+		        let ToCurrency = parseFloat(inputToCurrency);
+		        outputbtConvert = (Tien * ToCurrency) / FromCurrency;
+		        document.getElementById("btConvert").innerHTML = outputbtConvert;
+		    }
+		}
+	</script>
+</body>
+</html>
